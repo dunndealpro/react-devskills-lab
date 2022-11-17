@@ -1,4 +1,4 @@
-
+import {useState} from "react";
 import "./App.css";
 import "./SkillListItem.css";
 // import "./NewSkillForm.css";
@@ -10,14 +10,23 @@ import SkillListItem from "./SkillListItem";
 
 // const skills = ['flamingo', 'Baby Penguin', 'ostrich', 'ptero']
 
-const skills = [
-  { name: "HTML", level: 5 },
-  { name: "CSS", level: 3 },
-  { name: "JavaScript", level: 4 },
-  { name: "Python", level: 2 },  
-];
+// const skills = [
+//   { name: "HTML", level: 5 },
+//   { name: "CSS", level: 3 },
+//   { name: "JavaScript", level: 4 },
+//   { name: "Python", level: 2 },  
+// ];
+
+
 
 function App() {
+  const [skills, setSkills] = useState([
+    { name: "HTML", level: 5 },
+    { name: "CSS", level: 3 },
+    { name: "JavaScript", level: 4 },
+    { name: "Python", level: 2 },  
+  ]);
+
   return (
     <div className="App">
       <h1> React Dev Skills </h1>
