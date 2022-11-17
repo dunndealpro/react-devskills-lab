@@ -1,9 +1,9 @@
-
+import "./NewSkillForm.css";
 
 export default function NewSkillForm() {
     // Application logic, etc. goes here
     return (
-        <form>
+        <form class="NewSkillForm">
             <label>Skill </label><input type="text" name="skill"></input>
             <label>Level </label>
            <select>

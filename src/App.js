@@ -1,13 +1,32 @@
-import logo from "./logo.svg";
+
 import "./App.css";
+import "./SkillListItem.css";
+// import "./NewSkillForm.css";
 import SkillList from "./SkillList";
 import NewSkillForm from "./NewSkillForm";
+
+
+import SkillListItem from "./SkillListItem";
+
+// const skills = ['flamingo', 'Baby Penguin', 'ostrich', 'ptero']
+
+const skills = [
+  { name: "HTML", level: 5 },
+  { name: "CSS", level: 3 },
+  { name: "JavaScript", level: 4 },
+  { name: "Python", level: 2 },  
+];
 
 function App() {
   return (
     <div className="App">
       <h1> React Dev Skills </h1>
-      <SkillList />
+      <SkillList skills={skills} />
+      {/* <ul>
+        {skills.map(skill =>(
+          <SkillListItem skill={skill}/>
+          ))}
+      </ul> */}
 <hr></hr>
 <NewSkillForm />
     </div>

@@ -1,14 +1,17 @@
+
 import SkillListItem from "./SkillListItem";
 
-export default function SkillList() {
+export default function SkillList({skills}) {
     // Application logic, etc. goes here
+  
     return (
       <ul>
-        <SkillListItem/>
-        <SkillListItem/>
-        <SkillListItem/>
-      </ul>
-    
+      {skills.map(skill =>(
+        <SkillListItem skill={skill}/>
+        ))}
+    </ul>
     );
   }
+
+  // {skills.map(skill => <SkillListItem skill={skill}/>)}
   
