@@ -5,23 +5,23 @@ import {useState} from "react";
 export default function NewSkillForm({addSkill}) {
    const[formSkill, setFormSkill]=useState({
        name: "",
-       level: ""
+       level: "3"
    })  
 
     function handleAddSkill(event){
         event.preventDefault()        
-        setFormSkill({
-            name: "",
-            level: ""
-        })
         const newSkill = formSkill;
         addSkill(newSkill);
+        setFormSkill({
+            name: "",
+            level: "3"
+        })
     }
 
     const handleSkillChange = (event)=> { 
         const newFormSkill = {...formSkill, [event.target.name]:event.target.value}
         setFormSkill(newFormSkill)
-        console.log('huh:  ', formSkill)
+        
     }
 
     return (
