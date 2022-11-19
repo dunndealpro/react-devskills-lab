@@ -7,7 +7,7 @@ export default function SkillList({skills}) {
     return (
       <ul>
       {skills.map(skill =>(
-        <SkillListItem skill={skill}/>
+        <SkillListItem key={skill}  skill={skill}/>
         ))}
     </ul>
     );

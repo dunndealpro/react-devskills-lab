@@ -1,4 +1,5 @@
 import {useState} from "react";
+
 import "./App.css";
 import "./SkillListItem.css";
 // import "./NewSkillForm.css";
@@ -6,7 +7,7 @@ import SkillList from "./SkillList";
 import NewSkillForm from "./NewSkillForm";
 
 
-import SkillListItem from "./SkillListItem";
+// import SkillListItem from "./SkillListItem";
 
 // const skills = ['flamingo', 'Baby Penguin', 'ostrich', 'ptero']
 
@@ -27,7 +28,13 @@ function App() {
     { name: "Python", level: 2 },  
   ]);
 
-  return (
+function addSkill(skill){
+  setSkills([...skills, skill])
+}
+
+
+
+return (
     <div className="App">
       <h1> React Dev Skills </h1>
       <SkillList skills={skills} />
@@ -36,8 +43,8 @@ function App() {
           <SkillListItem skill={skill}/>
           ))}
       </ul> */}
-<hr></hr>
-<NewSkillForm />
+<hr/>
+<NewSkillForm addSkill={addSkill} />
     </div>
   );
 }
